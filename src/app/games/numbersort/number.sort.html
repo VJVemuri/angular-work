@@ -1,0 +1,17 @@
+<div style="margin: 5em; color:violet">
+    <h2>Arrange Numbers Lowest to Highest ( Drag & Drop )</h2>
+    <div 
+    cdkDropList 
+    #moviesList="cdkDropList" 
+    [cdkDropListData]="numbersList"
+    class="movie-list" 
+    (cdkDropListDropped)="onDrop($event)">
+    <div class="movie-block" *ngFor="let numbersList of numbersList" cdkDrag>{{numbersList}}</div>
+  </div>
+
+  <div *ngIf="showMessage">Congratulations !!. Good Job</div>
+  <div>
+  <button mat-raised-button color="primary" (click)="newGame()">Play Again</button>
+</div>
+
+</div>    
